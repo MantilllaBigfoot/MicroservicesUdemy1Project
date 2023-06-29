@@ -1,6 +1,10 @@
 # Base image
 FROM node:alpine
 
+#Bug from create react app
+ENV CI=true
+ENV WDS_SOCKET_PORT=0
+
 #Every change from executing user is happening here
 WORKDIR /app
 
